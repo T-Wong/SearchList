@@ -1,15 +1,3 @@
-SearchList
-==========
-
-Compiles a large search list of commonly searched for things.
-
-## Description
-I started by scraping the top viewed articles on Wikipedia and by using AOL's top searched for items. This resulted in about 25,000 search terms. I then used Bing's API 2.0 to find related searches by parsing JSON data. This has resulted in almost 3 million search results.
-
-## Download
-You can download the full list [here] (https://github.com/T-Wong/SearchList/blob/master/src/SearchList?raw=true).
-
-## License
 The MIT License (MIT)
 
 Copyright (c) 2014 Tyler Wong
