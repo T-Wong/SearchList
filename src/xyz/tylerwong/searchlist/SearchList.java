@@ -1,3 +1,4 @@
+package xyz.tylerwong.searchlist;
 /*	Created by: Tyler Wong
  * 	Date: August 10th, 2014
  * 	Purpose: To obtain an up to date sarch list of up to date search terms that people
