@@ -21,7 +21,7 @@ import org.junit.*;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.seleniumhq.jetty7.util.ajax.JSON;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.json.*;
 
 public class SearchList {
@@ -54,7 +54,10 @@ public class SearchList {
     
     @Before
     public void setUp() {
-        driver = new FirefoxDriver();
+    	System.setProperty("webdriver.gecko.driver","E:\\Workplace\\SearchList\\bin\\geckodriver.exe");
+    	DesiredCapabilities capabilities=DesiredCapabilities.firefox();
+    	capabilities.setCapability("marionette", true);
+        driver = new FirefoxDriver(capabilities);
         historyWikiUrl = "http://tools.wmflabs.org/usersearch/usersearch.py?name=West.andrew.g&page=User%3AWest.andrew.g%2FPopular+pages&server=enwiki&max=500";
         wikiUrl = "http://en.wikipedia.org/wiki/Wikipedia:5000";		//This list updates every Sunday morning (UTC), aggregating data from the 7 days preceeding 11:59PM Saturday.
         aolUrl = "http://search.aol.com/aol/trends";
